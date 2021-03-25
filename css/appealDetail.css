@@ -1,0 +1,148 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+.box {
+    padding: 80px 0 0 260px;
+}
+
+.appealDetail-box {
+    width: 100%;
+    /* min-height: 800px; */
+    padding: 36px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hr {
+    margin: 16px 0 0 0;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.appealDetail-box p {
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.appealDetail-box .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    padding-top: 32px;
+    min-height: 118px;
+}
+
+.box .appealDetail-box input {
+    margin-top: 8px;
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.box .appealDetail-box .row input#date{
+    color: transparent;
+}
+
+.box .appealDetail-box .row .dateText{
+    position: absolute;
+    top: 30px;
+    left: 17px;
+    width: 152px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    cursor: default;
+}
+
+.box .appealDetail-box textarea{
+    margin-top: 8px;
+    width: 100%;
+    height: 300px;
+    min-height: 200px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px;
+    resize: none;
+}
+
+.box .appealDetail-box button{
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box .appealDetail-box button:hover{
+    background-color: rgb(131, 120, 47, 1);
+}
+
+@media screen and (max-width: 1599px) {
+    .box {
+        padding: 80px 0 0 calc(100% - 1340px);
+    }
+}
+
+@media screen and (max-width: 1569px) {
+    .box {
+        padding: 80px 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 1449px) {
+    .box {
+        padding: 80px 0 0 0;
+    }
+    .appealDetail-box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #box-padding {
+        padding: 0 !important;
+    }
+
+    .appealDetail-box {
+        padding: 24px 16px;
+        border-radius: 0;
+        min-height: calc(100vh - 80px);
+    }
+
+    .appealDetail-box .grid-container{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 16px;
+    }
+
+    .appealDetail-box .row div{
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,315 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+body {
+    background: url("../img/tool/bg.png");
+}
+
+.box {
+    width: 1200px;
+    margin: auto;
+    padding: 32px;
+}
+
+.box .dailyForm {
+    width: 100%;
+    padding: 32px;
+    background: url("../img/tool/bg2.png");
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.hr {
+    margin: 16px auto 32px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.box .dailyForm input:not([type=file]),
+.box .dailyForm select {
+    margin-top: 8px;
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.box .dailyForm input[type=checkbox]{
+    margin: 0 8px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.box .dailyForm button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box .dailyForm button:disabled{
+    background-color: #ddd;
+    cursor: default;
+}
+
+.box .dailyForm button:hover {
+    background-color: rgb(131, 120, 47, 1);
+}
+
+.box .dailyForm button:disabled:hover{
+    background-color: #ddd;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    gap: 16px 8px;
+    /* grid-template-areas:
+        "name_title name_title firstname firstname firstname lastname lastname lastname"
+        "id_card id_card email email email email tel tel"
+        "check_in check_in check_out check_out night people air fan"
+        "total_price . . . . . . ."; */
+}
+
+.grid-container > div{
+    height: 86px;
+}
+
+.price_detail{
+    /* padding-top:32px; */
+    width: 600px;
+    margin: auto;
+}
+
+.bill_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+table{
+    padding-top: 16px;
+    width: 100%;
+    /* border: 1px solid; */
+    border-collapse: collapse; 
+    margin: auto;
+}
+
+table tr{
+    height: 50px;
+}
+
+table tr:last-child{
+    border-top: 1px solid rgb(131, 120, 47, 0.7);
+    /* opacity: 0.5; */
+}
+
+table tr td:last-child{
+    text-align: right;
+}
+
+p{
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;     
+    white-space: nowrap;
+}
+
+.name_title {
+    grid-area: name_title;
+    height: 86px;
+}
+
+.id_card {
+    grid-area: id_card;
+    height: 86px;
+}
+
+.firstname {
+    grid-area: firstname;
+    height: 86px;
+}
+
+.lastname {
+    grid-area: lastname;
+    height: 86px;
+}
+
+.email {
+    grid-area: email;
+    height: 86px;
+}
+
+.tel {
+    grid-area: tel;
+    height: 86px;
+}
+
+.check_in {
+    grid-area: check_in;
+    height: 86px;
+}
+
+.check_out {
+    grid-area: check_out;
+    height: 86px;
+}
+
+.night{
+    grid-area: night;
+    height: 86px;
+}
+
+.people {
+    grid-area: people;
+    height: 86px;
+}
+
+.air {
+    grid-area: air;
+    height: 86px;
+}
+
+.fan {
+    grid-area: fan;
+    height: 86px;
+}
+
+.total_room{
+    grid-area: total_room;
+    height: 86px;
+}
+
+.vat{
+    grid-area: vat;
+    height: 86px;
+}
+
+.total_price{
+    grid-area: total_price;
+    height: 86px;
+}
+
+.box .dailyForm .placeholder-error::-webkit-input-placeholder {
+    color: red
+}
+
+.box .dailyForm .payment-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+}
+
+.box .dailyForm .payment-grid .qr-box{
+    margin-top: 16px;
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .dailyForm .payment-grid .qr-box2{
+    margin-top: 16px;
+    padding: 16px;
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+}
+
+.box .dailyForm .payment-grid .qr-box2 .img-box{
+    width: 100%;
+    height: 420px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+}
+
+.box .dailyForm .payment-grid .qr-box img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.box .dailyForm .payment-grid .qr-box2 input[type=file]{
+    margin-top: 8px;
+}
+
+.box .dailyForm .payment-grid .qr-box2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1199px){
+    .box{
+        width: 100%;
+        padding: 112px 16px;
+    }
+    .box .dailyForm .payment-grid{
+        width: 100%;
+        row-gap: 16px;
+        grid-template-columns: 100%;
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "name_title firstname firstname firstname lastname lastname lastname"
+        "id_card id_card email email email tel tel"
+        "check_in check_in check_in check_out check_out check_out night"
+        "people air fan total_room vat total_price total_price";
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "name_title firstname firstname lastname lastname"
+        "id_card id_card email email tel"
+        "check_in check_in check_out check_out night"
+        "people air fan total_room vat"
+        "total_price . . . .";
+    }
+}
+
+@media screen and (max-width: 767px){
+    .box .dailyForm{
+        padding: 32px 16px;
+    }
+    .grid-container{
+        display: block;
+    }
+
+    .price_detail{
+        width: auto;
+    }
+}
+

@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+body {
+    background: url("../img/tool/bg.png");
+}
+
+.box {
+    width: 1400px;
+    margin: auto;
+    padding: 32px;
+}
+
+.box .roomPage {
+    width: 100%;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: url("../img/tool/bg2.png");
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.hr{
+    margin: 16px auto 32px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.box .roomPage img {
+    height: 450px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.box .roomPage .room-detail{
+    padding: 0 32px;
+}
+
+.box .roomPage .room-detail h2{
+    color: #b3994c;
+    font-weight: bold;
+}
+
+.box .roomPage .room-detail button{
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box .roomPage .room-detail button:hover{
+    background-color: rgb(131, 120, 47, 1);
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    animation-name: mySlides;
+    animation-duration: 1s;
+}
+
+@keyframes mySlides{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 4px 4px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.3s;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row{
+    padding-top: 8px;
+    overflow: auto;
+  white-space: nowrap;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    display: inline-block;
+    width: 108px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.box .roomPage .demo {
+    height: 80px;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.box .roomPage .active,
+.box .roomPage .demo:hover {
+    opacity: 1;
+}
+

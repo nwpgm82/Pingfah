@@ -1,0 +1,355 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+.box {
+    padding: 80px 0 0 260px;
+}
+
+.roomform-box {
+    width: 100%;
+    min-height: 800px;
+    padding: 36px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.roomform-box .option-grid {
+    display: grid;
+    grid-template-columns: auto 40px 40px 40px;
+    column-gap: 8px;
+    grid-template-areas:
+        "plus quit edit del"
+        ". . . ."
+        ". . . .";
+}
+
+.plus {
+    grid-area: plus;
+}
+
+.quit {
+    grid-area: quit;
+}
+
+.edit {
+    grid-area: edit;
+}
+
+.del {
+    grid-area: del;
+}
+
+.roomform-box a {
+    height: 40px;
+}
+
+.roomform-box .plus-btn {
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/plus-icon.png);
+    background-color: #88BC45;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomform-box .edit-btn {
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/edit-icon.png);
+    background-color: darkturquoise;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomform-box .edit-btn:hover {
+    background-color: rgb(0, 165, 165);
+}
+
+.roomform-box .del-btn {
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/trash-icon.png);
+    background-color: rgb(255, 70, 70);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomform-box .del-btn:hover {
+    background-color: rgb(216, 40, 40);
+}
+
+.roomform-box .quit-btn {
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/quit-icon.png);
+    background-size: 30px;
+    background-color: #8c8c8c;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomform-box .quit-btn:hover {
+    background-color: #7d7d7d;
+}
+
+.roomform-box .correct-btn {
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/correct-icon.png);
+    background-color: #88BC45;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomform-box .plus-btn:hover,
+.roomform-box .correct-btn:hover {
+    background-color: #719c39;
+}
+
+.roomform-box .cancel-btn {
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/cancel-icon.png);
+    background-color: rgb(255, 70, 70);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomform-box .cancel-btn:hover {
+    background-color: rgb(216, 40, 40);
+}
+
+.roomform-box .delimg-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/trash-icon.png);
+    background-color: rgb(255, 70, 70);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomform-box .delimg-btn:hover {
+    background-color: rgb(216, 40, 40);
+}
+
+.hr {
+    margin: 16px auto 0px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.roomform-box .new_customer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 728px;
+}
+
+.roomform-box button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.roomform-box button:hover {
+    background-color: rgb(131, 120, 47, 1);
+}
+
+.grid-container {
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 16px 8px;
+    grid-template-areas:
+        "check_in check_in check_out check_out night . ."
+        "name_title firstname firstname firstname lastname lastname lastname"
+        "id_card id_card email email email tel tel";
+}
+
+.check_in {
+    grid-area: check_in;
+    height: 86px;
+}
+
+.check_out {
+    grid-area: check_out;
+    height: 86px;
+}
+
+.night {
+    grid-area: night;
+    height: 86px;
+}
+
+.name_title {
+    grid-area: name_title;
+    height: 86px;
+}
+
+.firstname {
+    grid-area: firstname;
+    height: 86px;
+}
+
+.lastname {
+    grid-area: lastname;
+    height: 86px;
+}
+
+.id_card {
+    grid-area: id_card;
+    height: 86px;
+}
+
+.email {
+    grid-area: email;
+    height: 86px;
+}
+
+.tel {
+    grid-area: tel;
+    height: 86px;
+}
+
+.roomform-box p {
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.roomform-box input:not([type=file]),
+.roomform-box select {
+    margin-top: 8px;
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.roomform-box .img-box {
+    position: relative;
+    margin: 8px 0;
+    width: 100%;
+    height: 400px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.roomform-box .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.roomform-box .placeholder-error::-webkit-input-placeholder {
+    color: red
+}
+
+@media screen and (max-width: 1599px) {
+    .box {
+        padding: 80px 0 0 calc(100% - 1340px);
+    }
+}
+
+@media screen and (max-width: 1569px) {
+    .box {
+        padding: 80px 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 1449px) {
+    .box {
+        padding: 80px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .roomform-box {
+        padding: 24px;
+    }
+
+    .grid-container {
+        gap: 8px 8px;
+    }
+
+    #copy-box {
+        padding-top: 16px !important;
+    }
+
+    .roomform-box .img-box {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    input:placeholder-shown {
+        text-overflow: ellipsis;
+    }
+
+    .roomform-box .img-grid .img-box {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #box-padding {
+        padding: 0 !important;
+    }
+
+    .roomform-box {
+        padding: 24px 16px;
+        border-radius: 0;
+        min-height: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "check_in check_out"
+            "night night"
+            "name_title name_title"
+            "firstname firstname"
+            "lastname lastname"
+            "id_card id_card"
+            "email email"
+            "tel tel";
+    }
+
+    h5 {
+        height: 19px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}

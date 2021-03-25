@@ -1,0 +1,311 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+.box {
+    padding: 80px 0 0 260px;
+}
+
+.costDetail-box {
+    width: 100%;
+    min-height: 800px;
+    padding: 36px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.costDetail-box .edit-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    padding: 0;
+    background-image: url(../img/tool/edit-icon.png);
+    background-color: darkturquoise;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.costDetail-box .edit-btn:hover {
+    background-color: rgb(0, 165, 165);
+}
+
+.costDetail-box .correct-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    padding: 0;
+    background-image: url(../img/tool/correct-icon.png);
+    background-color: #88BC45;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.costDetail-box .correct-btn:hover {
+    background-color: #719c39;
+}
+
+.costDetail-box .cancel-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    padding: 0;
+    background-image: url(../img/tool/cancel-icon.png);
+    background-color: rgb(255, 70, 70);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.costDetail-box .cancel-btn:hover {
+    background-color: rgb(216, 40, 40);
+}
+
+.hr {
+    margin: 16px auto 32px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.4);
+}
+
+.costDetail-box p {
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 16px 8px;
+    grid-template-areas:
+        "room_id room_type date date"
+        "room_cost room_cost cable_charge cable_charge"
+        "water_bill water_bill elec_bill elec_bill"
+        "fines fines total total"
+        "cost_status cost_status pay_date pay_date";
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 16px 8px;
+    grid-template-areas:
+        "room_id room_type date date"
+        "room_cost room_cost deposit deposit"
+        "total total cost_status cost_status"
+        "pay_date pay_date pay_date pay_date";
+}
+
+.grid-container3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 16px 8px;
+    grid-template-areas:
+        "room_id room_type date date"
+        "deposit_after deposit_after cable_charge cable_charge"
+        "water_bill water_bill elec_bill elec_bill"
+        "fines fines total total"
+        "cost_status cost_status pay_date pay_date";
+}
+
+.room_id {
+    grid-area: room_id;
+    height: 86px;
+}
+
+.room_type {
+    grid-area: room_type;
+    height: 86px;
+}
+
+.date {
+    grid-area: date;
+    height: 86px;
+}
+
+.room_cost {
+    grid-area: room_cost;
+    height: 86px;
+}
+
+.cable_charge {
+    grid-area: cable_charge;
+    height: 86px;
+}
+
+.water_bill {
+    grid-area: water_bill;
+    height: 86px;
+}
+
+.elec_bill {
+    grid-area: elec_bill;
+    height: 86px;
+}
+
+.fines{
+    grid-area: fines;
+    height: 86px;
+}
+
+.total {
+    grid-area: total;
+    height: 86px;
+}
+
+.cost_status {
+    grid-area: cost_status;
+    height: 86px;
+}
+
+.pay_date {
+    grid-area: pay_date;
+    height: 86px;
+}
+
+.deposit{
+    grid-area: deposit;
+    height: 86px;
+}
+
+.deposit_after{
+    grid-area: deposit_after;
+    height: 86px;
+}
+
+.costDetail-box input:not([type=file]) {
+    margin-top: 8px;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.costDetail-box .edit-option {
+    grid-template-columns: 40px 40px;
+    column-gap: 8px;
+}
+
+.costDetail-box .img-box{
+    width: 100%;
+    height: 550px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+}
+
+.costDetail-box .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1599px) {
+    .box {
+        padding: 80px 0 0 calc(100% - 1340px);
+    }
+}
+
+@media screen and (max-width: 1569px) {
+    .box {
+        padding: 80px 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 1449px) {
+    .box {
+        padding: 80px 0 0 0;
+    }
+    .costDetail-box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    #box-padding{
+        display: block !important;
+    }
+
+    .costDetail-box{
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #box-padding {
+        padding: 0 !important;
+    }
+
+    .costDetail-box {
+        padding: 24px 16px;
+        border-radius: 0;
+        min-height: calc(100vh - 80px);
+    }
+    
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "room_id room_id"
+        "room_type room_type"
+        "date date"
+        "room_cost room_cost"
+        "cable_charge cable_charge"
+        "water_bill water_bill"
+        "elec_bill elec_bill"
+        "fines fines"
+        "total total"
+        "cost_status cost_status"
+        "pay_date pay_date";
+    }
+
+    .grid-container2{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "room_id room_id"
+        "room_type room_type"
+        "date date"
+        "room_cost room_cost"
+        "deposit deposit"
+        "total total"
+        "cost_status cost_status"
+        "pay_date pay_date";
+    }
+
+    .grid-container3{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "room_id room_id"
+        "room_type room_type"
+        "date date"
+        "deposit_after deposit_after"
+        "cable_charge cable_charge"
+        "water_bill water_bill"
+        "elec_bill elec_bill"
+        "fines fines"
+        "total total"
+        "cost_status cost_status"
+        "pay_date pay_date";
+    }
+}

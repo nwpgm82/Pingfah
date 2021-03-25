@@ -1,0 +1,207 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+    font-size: 14px;
+}
+
+.letter {
+    width: 210mm;
+    height: auto;
+    border: 1px solid #000;
+    /* padding: 1cm; */
+    padding: 16px 16px 8px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.letter .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.letter .header img {
+    width: 40px;
+    height: 40px;
+}
+
+.letter .header .code_text {
+    position: absolute;
+    top: -3px;
+    right: 14px;
+}
+
+.letter .name {
+    position: absolute;
+    top: -3px;
+    left: 32px;
+}
+
+.letter .email {
+    position: absolute;
+    top: -3px;
+    left: 298px;
+}
+
+.letter .tel {
+    position: absolute;
+    top: -3px;
+    right: 50px;
+}
+
+.letter .check_in {
+    position: absolute;
+    top: 27px;
+    left: 55px;
+}
+
+.letter .check_out {
+    position: absolute;
+    top: 27px;
+    left: 270px;
+}
+
+.letter table {
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* .letter table tr:nth-child(3) {
+    height: 60px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.letter table tr:nth-child(4) {
+    height: 50px;
+    border: 1px solid #000;
+}
+
+.letter table tr:nth-child(5),
+.letter table tr:nth-child(6),
+.letter table tr:nth-child(7),
+.letter table tr:nth-child(8) {
+    height: 50px;
+}
+
+.letter table tr:nth-child(5) td:nth-child(1),
+.letter table tr:nth-child(6) td:nth-child(1),
+.letter table tr:nth-child(7) td:nth-child(1),
+.letter table tr:nth-child(8) td:nth-child(1) {
+    border: none;
+}
+
+.letter table tr:nth-child(5) td:nth-child(2),
+.letter table tr:nth-child(5) td:nth-child(3),
+.letter table tr:nth-child(6) td:nth-child(2),
+.letter table tr:nth-child(6) td:nth-child(3),
+.letter table tr:nth-child(7) td:nth-child(2),
+.letter table tr:nth-child(7) td:nth-child(3),
+.letter table tr:nth-child(8) td:nth-child(2),
+.letter table tr:nth-child(8) td:nth-child(3) {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+} */
+
+.letter table tr th:nth-child(1) {
+    width: 8%;
+}
+
+.letter table tr th:nth-child(2) {
+    width: 44%;
+}
+
+.letter table tr th:nth-child(3) {
+    width: 13%;
+}
+
+.letter table tr th:nth-child(4) {
+    width: 13%;
+}
+
+.letter table tr th:nth-child(5) {
+    width: 20%;
+}
+
+.letter table tr th {
+    border: 1px solid #000;
+    height: 50px;
+}
+
+.letter table tr:not(:last-child) td{
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    padding: 16px 0;
+}
+
+.letter table tr td:not(:nth-child(2)){
+    text-align: center;
+    /* border: 1px solid #000; */
+}
+
+.letter table tr:nth-child(2) td:nth-child(2) {
+    padding: 16px 0 16px 8px;
+}
+
+.letter table tr:nth-last-child(2) td{
+    border: 1px solid #000;
+    height: 50px;
+}
+
+.letter table tr:not(:last-child) td:nth-child(2){
+    padding-left: 8px;
+}
+
+.letter table tr:nth-last-child(3) td{
+    padding-bottom: 60px !important;
+}
+
+.letter table tr:last-child{
+    height: 50px;
+}
+
+.letter table tr:last-child td:nth-last-child(2), .letter table tr:last-child td:last-child{
+    border: 1px solid #000;
+}
+
+.letter table tr:not(:first-child:last-child) td:last-child{
+    text-align: right;
+    padding-right: 16px;
+}
+
+.letter .sig{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .letter .sig {
+    height: 180px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.letter .sig .sub-sig {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.letter .sig .sub-sub-sig{
+    line-height: 29px;
+    position: relative;
+} */

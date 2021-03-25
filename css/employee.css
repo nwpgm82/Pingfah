@@ -1,0 +1,331 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+.box {
+    padding: 80px 0 0 260px;
+}
+
+.employee-box {
+    width: 100%;
+    min-height: 800px;
+    padding: 36px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.employee-box .option-grid{
+    display: grid;
+    grid-template-columns: 40px auto;
+    column-gap: 8px;
+}
+
+.employee-box .option-grid a{
+    height: 40px;
+}
+
+.employee-box .option-grid .history-btn{
+    width: 40px;
+    background-image: url("../img/tool/history-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.hr {
+    margin: 16px auto 32px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.employee-box .search{
+    display: flex;
+    align-items: flex-end;
+}
+
+.employee-box .placeholder-error::-webkit-input-placeholder {
+    color: red
+}
+
+.employee-box .search input{
+    margin-top: 8px;
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.employee-box .search a{
+    height: 40px !important;
+}
+
+.employee-box table{
+    margin-top: 24px;
+    width: 100%;
+    /* overflow: hidden; */
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+    border-radius: 4px;
+}
+
+.employee-box table tr th:nth-child(1){
+    width: 5%;
+}
+
+.employee-box table tr th:nth-child(2){
+    width: 25%;
+}
+.employee-box table tr th:nth-child(3){
+    width: 10%;
+}
+.employee-box table tr th:nth-child(4){
+    width: 15%;
+}
+.employee-box table tr th:nth-child(5){
+    width: 20%;
+}
+.employee-box table tr th:nth-child(6){
+    width: 25%;
+}
+
+.employee-box table tr{
+    height: 60px;
+}
+
+.employee-box table th{
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-weight: 500;
+}
+
+.employee-box table th,
+.employee-box table td{
+    height: 60px;
+    border: 1px solid #ddd;
+}
+
+.employee-box table th{
+    justify-content: center;
+}
+
+.employee-box table td{
+    padding: 0 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.employee-box table td .grid{
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-column-gap: 16px;
+    align-items: center;
+    height: 60px;
+}
+
+.employee-box table td img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.employee-box button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.employee-box .search .cancel-sort {
+    background-color: #fff;
+    border: 1px solid gray;
+    color: grey;
+}
+
+.employee-box .cancel-sort:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.employee-box table td .del-btn{
+    background-color: rgb(255, 70, 70);
+}
+
+.employee-box button:hover{
+    background-color: rgb(131, 120, 47, 1);
+}
+
+.employee-box table td .del-btn:hover{
+    background-color:rgb(216, 40, 40);
+}
+
+.employee-box table td .grid-btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 16px;
+}
+
+.pagination {
+    padding: 32px 0;
+    display: inline-block;
+}
+
+.pagination a {
+    color: #fff;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    background-color: rgb(131, 120, 47, 0.5);
+}
+
+.pagination a.active {
+    background-color: rgb(131, 120, 47, 1);
+    color: #fff;
+    border: 1px solid rgb(131, 120, 47, 1);
+}
+
+.pagination a:hover:not(.active) {
+    background-color: rgb(131, 120, 47, 0.7);
+    border: 1px solid rgb(131, 120, 47, 0.7);
+}
+
+.employee-box .checkbox-flex{
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+}
+
+.employee-box .checkbox-flex > div{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.employee-box .checkbox-flex input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1599px){
+    .box{
+        padding: 80px 0 0 calc(100% - 1340px);
+    }
+}
+
+@media screen and (max-width: 1569px){
+    .box{
+        padding: 80px 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 1449px){
+    .box{
+        padding: 80px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .employee-box{
+        padding: 24px;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .employee-box .search{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 8px;
+        row-gap: 16px;
+        /* padding-bottom: 32px; */
+    }
+
+    .employee-box .search .cancel-sort{
+        width: 100%;
+    }
+
+    .employee-box .checkbox-flex{
+        padding-top: 32px;
+    }
+
+    #input_error{
+        display: none;
+    }
+
+    #search-box{
+        height: auto !important;
+    }
+
+    .employee-box .search div{
+        padding: 0 !important;
+    }
+
+    input:placeholder-shown{
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #box-padding{
+        padding: 0 !important;
+    }
+
+    .employee-box{
+        padding: 24px 16px;
+        border-radius: 0;
+    }
+
+    .employee-box .search{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 8px;
+        row-gap: 16px;
+        grid-template-areas: 
+            "a b"
+            "c c"
+            "d d";
+        /* padding-bottom: 32px; */
+    }
+    
+    .employee-box .search > div:first-child{
+        grid-area: a;
+    }
+
+    .employee-box .search > div:nth-child(2){
+        grid-area: b;
+    }
+
+    .employee-box .search #search_em{
+        grid-area: c;
+    }
+
+    .employee-box .search > div:last-child{
+        grid-area: d;
+    }
+}

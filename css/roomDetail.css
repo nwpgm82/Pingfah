@@ -1,0 +1,300 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+.box {
+    padding: 80px 0 0 260px;
+}
+
+.roomDetail-box {
+    width: 100%;
+    height: 100%;
+    padding: 36px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.roomDetail-box .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roomDetail-box .header .edit-btn{
+    width: 40px;
+    height: 40px;
+    background-color: darkturquoise;
+    background-image: url("../img/tool/edit-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomDetail-box .header .edit-btn:hover{
+    background-color: rgb(0, 165, 165);
+}
+
+.grid-box{
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    column-gap: 16px;
+}
+
+.roomDetail-box .header .option-grid{
+    display: grid;
+    grid-template-columns: 40px 40px;
+    column-gap: 8px;
+}
+
+.roomDetail-box .header .option-grid .correct-btn{
+    width: 40px;
+    height: 40px;
+    background-color: #88BC45;
+    background-image: url("../img/tool/correct-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomDetail-box .header .option-grid .correct-btn:hover{
+    background-color: #719c39;
+}
+
+.roomDetail-box .header .option-grid .cancel-btn{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 70, 70);
+    background-image: url("../img/tool/cancel-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roomDetail-box .header .option-grid .cancel-btn:hover{
+    background-color:rgb(216, 40, 40);
+}
+
+.hr {
+    margin: 16px auto 32px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.roomDetail-box .content{
+    width: 100%;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.roomDetail-box .content .topic-box{
+    padding: 16px;
+    display: flex;
+    column-gap: 16px;
+}
+
+.roomDetail-box .content .img-box{
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+}
+
+.roomDetail-box .content .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.roomDetail-box input:not([type=file]){
+    margin-top: 8px;
+    width: 100%;
+    min-width: 220px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.roomDetail-box input[type=file]{
+    margin-top: 8px;
+}
+
+.roomDetail-box .grid{
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    width: 100%;
+}
+
+.roomDetail-box .card{
+    height: 100%;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.roomDetail-box .card .detail{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.roomDetail-box .card .detail > div:first-child h3{
+    color: #b3994c;
+}
+
+.roomDetail-box button{
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.roomDetail-box button:hover{
+    background-color: rgb(131, 120, 47, 1);
+}
+
+.roomDetail-box .grid p,.roomDetail-box .grid h3{
+    padding-bottom: 16px;
+}
+
+.roomDetail-box .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.roomDetail-box .card .container {
+    position: relative;
+}
+
+/* Hide the images by default */
+.roomDetail-box .card .mySlides1,
+.roomDetail-box .card .mySlides2 {
+    display: none;
+    height: 300px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.roomDetail-box .card .cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.roomDetail-box .card .prev,
+.roomDetail-box .card .next {
+    cursor: pointer;
+    position: absolute;
+    top: 38%;
+    width: auto;
+    padding: 16px;
+    /* margin-top: -50px; */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.2s;
+}
+
+/* Position the "next button" to the right */
+.roomDetail-box .card .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.roomDetail-box .card .prev:hover,
+.roomDetail-box .card .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 1599px){
+    .box{
+        padding: 80px 0 0 calc(100% - 1340px);
+    }
+}
+
+@media screen and (max-width: 1569px){
+    .box{
+        padding: 80px 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 1449px){
+    .box{
+        padding: 80px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .roomDetail-box{
+        padding: 24px;
+    }
+    .roomDetail-box .grid{
+        grid-template-columns: 100%;
+    }
+    .grid-box{
+        display: block;
+    }
+    #vat-box{
+        margin-top: 32px;
+    }
+    #vat-box .roomDetail-box{
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #box-padding{
+        padding: 0 !important;
+    }
+
+    .roomDetail-box{
+        padding: 24px 16px;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+
+    .roomDetail-box .card{
+        grid-template-columns: 100%;
+        height: auto;
+    }
+
+    .roomDetail-box .card .detail{
+        row-gap: 16px;
+    }
+
+    .roomDetail-box .content .topic-box{
+        display: block;
+    }
+
+    .roomDetail-box .content .topic-box > div:first-child{
+        padding-bottom: 16px;
+    }
+}

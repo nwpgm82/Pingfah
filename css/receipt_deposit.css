@@ -1,0 +1,135 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+    font-size: 14px;
+}
+
+.letter{
+    width: 210mm;
+    height: auto;
+    border: 1px solid #000;
+    padding: 16px 16px 8px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.letter .header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding-bottom:40px;
+}
+
+.letter .header img{
+    width: 40px;
+    height: 40px;
+}
+
+.letter .header .code_text{
+    position: absolute;
+    top: -3px;
+    right: 14px;
+}
+
+.letter .name{
+    position: absolute;
+    top: -3px;
+    left: 32px;
+}
+
+.letter .email{
+    position: absolute;
+    top: -3px;
+    left: 298px;
+}
+
+.letter .tel{
+    position: absolute;
+    top: -3px;
+    right: 50px;
+}
+
+.letter .check_in{
+    position: absolute;
+    top: 27px;
+    left: 55px;
+}
+
+.letter .check_out{
+    position: absolute;
+    top: 27px;
+    left: 270px;
+}
+
+.letter table{
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.letter table tr{
+    height: 40px;
+}
+
+.letter table tr:first-child,.letter table tr:last-child{
+    border: 1px solid #000;
+}
+
+.letter table tr th:nth-child(1){
+    width: 8%;
+}
+
+.letter table tr th:nth-child(2){
+    width: 56%;
+}
+
+.letter table tr th:nth-child(3){
+    width: 14%;
+}
+
+.letter table tr th:nth-child(4){
+    width: 20%;
+}
+
+.letter table tr th{
+    border: 1px solid #000;
+}
+
+.letter table tr:not(:first-child:last-child) td{
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    padding: 16px 0;
+}
+
+.letter table tr:nth-last-child(2) td{
+    padding-bottom: 60px !important;
+}
+
+.letter table tr td:not(:nth-child(2)){
+    text-align: center;
+    /* border: 1px solid #000; */
+}
+
+.letter table tr:not(:first-child:last-child) td:nth-child(2){
+    padding-left: 8px;
+}
+
+.letter table tr:not(:first-child:last-child) td:last-child{
+    text-align: right;
+    padding-right: 16px;
+}
+
+.letter .sig{
+    display: flex;
+    justify-content: space-between;
+}
+

@@ -1,0 +1,364 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+.box {
+    padding: 80px 0 0 260px;
+}
+
+.dailyDetail-box {
+    width: 100%;
+    min-height: 800px;
+    padding: 36px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dailyDetail-box button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dailyDetail-box button:hover {
+    background-color: rgb(131, 120, 47, 1);
+}
+
+.dailyDetail-box p {
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* .dailyDetail-box .edit-btn {
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/edit-icon.png);
+    background-color: darkturquoise;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dailyDetail-box .edit-btn:hover {
+    background-color: rgb(0, 165, 165);
+}
+
+.dailyDetail-box .correct-btn{
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/correct-icon.png);
+    background-color: #88BC45;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dailyDetail-box .correct-btn:hover{
+    background-color: #719c39;
+}
+
+.dailyDetail-box .cancel-btn {
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/cancel-icon.png);
+    background-color: rgb(255, 70, 70);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dailyDetail-box .cancel-btn:hover {
+    background-color: rgb(216, 40, 40);
+} */
+
+
+.hr {
+    margin: 16px auto 32px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.box .dailyDetail-box input {
+    margin-top: 8px;
+    width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.box .dailyDetail-box input[type=number]::-webkit-inner-spin-button,
+.box .dailyDetail-box input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.box .dailyDetail-box input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 16px 8px;
+    grid-template-areas:
+        "room_select room_select room_select name_title firstname firstname firstname lastname lastname lastname"
+        "id_card id_card id_card email email email email tel tel tel"
+        "check_in check_in check_out check_out night people air fan total_price deposit"
+        "room_status room_status . . . . . . . .";
+}
+
+.room_select {
+    grid-area: room_select;
+    height: 86px;
+}
+
+.name_title {
+    grid-area: name_title;
+    height: 86px;
+}
+
+.firstname {
+    grid-area: firstname;
+    height: 86px;
+}
+
+.lastname {
+    grid-area: lastname;
+    height: 86px;
+}
+
+.id_card {
+    grid-area: id_card;
+    height: 86px;
+}
+
+.email {
+    grid-area: email;
+    height: 86px;
+}
+
+.tel {
+    grid-area: tel;
+    height: 86px;
+}
+
+.check_in {
+    grid-area: check_in;
+    height: 86px;
+}
+
+.check_out {
+    grid-area: check_out;
+    height: 86px;
+}
+
+.night {
+    grid-area: night;
+    height: 86px;
+}
+
+.people {
+    grid-area: people;
+    height: 86px;
+}
+
+.air {
+    grid-area: air;
+    height: 86px;
+}
+
+.fan {
+    grid-area: fan;
+    height: 86px;
+}
+
+.room_status {
+    grid-area: room_status;
+    height: 86px;
+}
+
+.total_price {
+    grid-area: total_price;
+    height: 86px;
+    position: relative;
+}
+
+.deposit{
+    grid-area: deposit;
+    height: 86px;
+    position: relative;
+}
+
+.total_room_price{
+    grid-area: total_room_price;
+    height: 86px;
+}
+
+.vat{
+    grid-area: vat;
+    height: 86px;
+}
+
+.box .dailyDetail-box .img-box {
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.box .dailyDetail-box .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.box .dailyDetail-box .img-box .del-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/trash-icon.png);
+    background-color: rgb(255, 70, 70);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box .dailyDetail-box .img-box .del-btn:hover {
+    background-color: rgb(216, 40, 40);
+}
+
+.box .dailyDetail-box .print{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 32px;
+    right: 4px;
+    background-image: url("../img/tool/printer.png");
+    background-color: rgb(131, 120, 47, 0.7);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.box .dailyDetail-box .print:hover{
+    background-color: rgb(131, 120, 47, 1);
+}
+
+.box .dailyDetail-box .un-print{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 32px;
+    right: 4px;
+    background-image: url("../img/tool/printer.png");
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.box .dailyDetail-box .un-print:hover{
+    background-color: #ddd;
+}
+
+@media screen and (max-width: 1599px) {
+    .box {
+        padding: 80px 0 0 calc(100% - 1340px);
+    }
+}
+
+@media screen and (max-width: 1569px) {
+    .box {
+        padding: 80px 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 1449px) {
+    .box {
+        padding: 80px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .dailyDetail-box {
+        padding: 24px;
+    }
+
+    #copy-box {
+        padding-top: 8px !important;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .grid-container {
+        grid-template-areas:
+            "room_select room_select room_select room_select . . . . . ."
+            "name_title name_title firstname firstname firstname firstname lastname lastname lastname lastname"
+            "id_card id_card id_card email email email email tel tel tel"
+            "check_in check_in check_in check_in check_out check_out check_out check_out night night"
+            "people people air air fan fan . . . ."
+            "total_room_price total_room_price vat vat total_price total_price deposit deposit room_status room_status";
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #box-padding {
+        padding: 0 !important;
+    }
+
+    .dailyDetail-box {
+        padding: 24px 16px;
+        border-radius: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "room_select room_select"
+            "name_title name_title"
+            "firstname firstname"
+            "lastname lastname"
+            "id_card id_card"
+            "email email"
+            "tel tel"
+            "check_in check_in"
+            "check_out check_out"
+            "night people"
+            "air fan"
+            "total_room_price total_room_price"
+            "vat vat"
+            "total_price total_price"
+            "deposit deposit"
+            "room_status room_status";
+        gap: 8px;
+    }
+}

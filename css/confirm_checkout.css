@@ -1,0 +1,323 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+.box {
+    padding: 80px 0 0 260px;
+}
+
+.c-box {
+    width: 100%;
+    min-height: 800px;
+    padding: 36px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.c-box .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hr {
+    margin: 16px auto 32px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.c-box p {
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.box .c-box input {
+    margin-top: 8px;
+    width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 16px 8px;
+    grid-template-areas:
+        "room_select room_select room_select name_title firstname firstname firstname lastname lastname lastname"
+        "id_card id_card id_card email email email email tel tel tel"
+        "check_in check_in check_out check_out night people air fan room_status room_status"
+        "total_price . . . . . . . . .";
+}
+
+.room_select {
+    grid-area: room_select;
+    height: 86px;
+}
+
+.name_title {
+    grid-area: name_title;
+    height: 86px;
+}
+
+.firstname {
+    grid-area: firstname;
+    height: 86px;
+}
+
+.lastname {
+    grid-area: lastname;
+    height: 86px;
+}
+
+.id_card {
+    grid-area: id_card;
+    height: 86px;
+}
+
+.email {
+    grid-area: email;
+    height: 86px;
+}
+
+.tel {
+    grid-area: tel;
+    height: 86px;
+}
+
+.check_in {
+    grid-area: check_in;
+    height: 86px;
+}
+
+.check_out {
+    grid-area: check_out;
+    height: 86px;
+}
+
+.night {
+    grid-area: night;
+    height: 86px;
+}
+
+.people {
+    grid-area: people;
+    height: 86px;
+}
+
+.air {
+    grid-area: air;
+    height: 86px;
+}
+
+.fan {
+    grid-area: fan;
+    height: 86px;
+}
+
+.room_status {
+    grid-area: room_status;
+    height: 86px;
+}
+
+.total_price {
+    grid-area: total_price;
+    height: 86px;
+}
+
+.c-box button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.c-box button:hover {
+    background-color: rgb(131, 120, 47, 1);
+}
+
+.c-box .plus-btn {
+    width: auto;
+    height: 36px;
+    padding-left: 40px;
+    background-image: url(../img/tool/plus-icon.png);
+    /* background-color: #88BC45; */
+    background-repeat: no-repeat;
+    background-position: 8% 50%;
+    /* align-self: flex-end; */
+}
+
+.c-box .damage-grid{
+    width: 100%;
+    min-height: 68px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.c-box .damage-grid .topic-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-box .damage-grid .topic-flex .del-damage{
+    width: 24px;
+    height: 20px;
+    padding: 0 0 24px 0;
+    background-color: #FF4646;
+}
+.c-box .damage-grid .topic-flex .del-damage:hover{
+    background-color: rgb(216, 40, 40);
+}
+
+.c-box .add-box{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 65px;
+}
+
+.c-box .add-box > div{
+    position: absolute;
+    top: -85px;
+    left: 0;
+    display: none;
+}
+
+.c-box .add-box .add-form{
+    display: flex;
+    column-gap: 8px;
+    padding: 16px;
+    background-color: #fff;
+    border: 1px solid rgb(131, 120, 47, 1);
+    border-radius: 4px;
+}
+
+.c-box .add-box .add-form button{
+    height: 36px;
+    align-self: flex-end;
+}
+
+.c-box .add-box .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgb(131, 120, 47, 0.7);
+    margin-right: auto;
+    position: relative;
+    left: 42px;
+}
+
+@media screen and (max-width: 1599px) {
+    .box {
+        padding: 80px 0 0 calc(100% - 1340px);
+    }
+}
+
+@media screen and (max-width: 1569px) {
+    .box {
+        padding: 80px 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 1449px) {
+    .box {
+        padding: 80px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .c-box {
+        padding: 24px;
+    }
+    .c-box .damage-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .grid-container {
+        grid-template-areas:
+            "room_select room_select room_select room_select . . . . . ."
+            "name_title name_title firstname firstname firstname firstname lastname lastname lastname lastname"
+            "id_card id_card id_card email email email email tel tel tel"
+            "check_in check_in check_in check_in check_out check_out check_out check_out night night"
+            "people people air air fan fan room_status room_status total_price total_price";
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #box-padding {
+        padding: 0 !important;
+    }
+
+    .c-box {
+        padding: 24px 16px;
+        border-radius: 0;
+    }
+
+    .c-box .header{
+        display: block;
+        line-height: 40px;
+    }
+
+    .c-box .header #code_text{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "room_select room_select"
+            "name_title name_title"
+            "firstname firstname"
+            "lastname lastname"
+            "id_card id_card"
+            "email email"
+            "tel tel"
+            "check_in check_out"
+            "night people"
+            "air fan"
+            "room_status room_status"
+            "total_price total_price";
+    }
+
+    #damages{
+        width: 100% !important;
+    }
+    .c-box .damage-grid{
+        grid-template-columns: 100%;
+    }
+
+    .c-box .plus-btn{
+        width: 100%;
+    }
+}

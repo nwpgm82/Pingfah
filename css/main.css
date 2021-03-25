@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+#l{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    z-index: 999;
+}
+
+#loader { 
+    border: 4px solid #e6e6e6; 
+    border-radius: 50%; 
+    border-top: 4px solid rgb(131, 120, 47, 0.7);
+    width: 70px; 
+    height: 70px; 
+    animation: spin 1s linear infinite; 
+} 
+  
+@keyframes spin { 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+} 
+  
+.center { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+} 
+
+body {
+    position: relative;
+    background: url('../img/tool/bg.png') ;
+    scroll-behavior: smooth;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    z-index: -1; /* push it to the background */
+    top: 800px; /* position it off the top background */
+    right: 0px;
+    bottom: 400px; /* position it off the bottom background */
+    left: 0px;
+    background: url('../img/tool/flower.png') bottom left no-repeat,url('../img/tool/flower2.png') bottom right no-repeat,url('../img/tool/flower3.png') top left no-repeat;
+    opacity: 0.2;
+}
+
+body::after{
+    content: '';
+    position: absolute;
+    z-index: -1; /* push it to the background */
+    top: 2000px; /* position it off the top background */
+    right: 0px;
+    bottom: 400px; /* position it off the bottom background */
+    left: 0px;
+    background: url('../img/tool/flower4.png') top right no-repeat;
+    opacity: 0.2;
+}
+
+.hr {
+    max-width: 1300px;
+    margin: 64px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.banner {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 1s ease;
+    transform: scale(1.1);
+}
+
+.reservation {
+    /* width: 1400px;
+    height: 90px;
+    margin: auto; */
+    position: relative;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    /* height: 120px; */
+    padding: 32px 16px;
+    border-radius: 4px;
+    background: url('../img/tool/bg2.png');
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.reservation .topic{
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #b3994c;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.reservation .re-flex{
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reservation .re-flex .roundtrip-input{
+    position: relative;
+    width: 250px;
+    height: 40px;
+    padding: 0 12px;
+    color: transparent;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    cursor: pointer;
+    background-image: url("../img/tool/calendar.png");
+    background-repeat:no-repeat;
+    background-size: 20px;
+    background-position: 96% 50%;
+}
+
+.reservation .re-flex #people{
+    width: 70px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    /* cursor: pointer; */
+    font-size: 16px;
+}
+
+.reservation input[type=number]::-webkit-inner-spin-button, 
+.reservation input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.reservation input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.reservation .re-flex .dateText{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    min-width: 134px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.reservation .re-flex button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+}
+
+.about {
+    padding: 80px 16px 0px 16px;
+    width: 1200px;
+    margin: auto;
+}
+
+.about .about-detail {
+    display: grid;
+    grid-template-columns: 650px auto;
+    width: 100%;
+    height: 450px;
+    background: url('../img/tool/bg2.png');
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.about .about-detail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.about .about-detail h2 {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #b3994c;
+    text-align: center;
+}
+
+.about .about-detail p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #000;
+}
+
+.room-box {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 1200px;
+    margin: auto;
+    padding: 0 16px;
+    /* height: 500px; */
+    /* background-color: #faf8f0; */
+}
+
+.room-box .room-detail {
+   width: 100%; 
+}
+
+.room-box .room-detail h2 {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #b3994c;
+    text-align: center;
+}
+
+.room-box .room-detail .room-grid {
+    padding: 60px 0;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 16px;
+}
+
+.room-box .room-detail .room-grid .detail-grid {
+    display: grid;
+    grid-template-columns: 320px auto;
+    border-radius: 4px;
+    background: url('../img/tool/bg2.png');
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.room-box .room-detail .room-grid .detail-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.room-box .room-detail .room-grid .detail-grid .detail {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+.room-box .room-detail .room-grid .detail-grid .detail h3 {
+    color: #b3994c;
+    font-weight: bold;
+}
+
+.room-box .room-detail .room-grid .detail-grid .detail button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reservation button:hover,
+.room-box .room-detail .room-grid .detail-grid .detail button:hover {
+    background-color: rgb(131, 120, 47, 1);
+}
+
+.submain2-box {
+    /* height: 500px; */
+    /* background: url(/Pingfah/img/tool/bg2.png); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submain2-box .submain2-topic {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #b3994c;
+    text-align: center;
+}
+
+.submain2-box .submain2-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 64px;
+    margin-top: 64px;
+    width: 800px;
+}
+
+.submain2-box .submain2-grid .icon-img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: auto;
+}
+
+.submain2-box .submain2-grid p {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #b3994c;
+    text-align: center;
+}
+
+.gallery {
+    width: 1200px;
+    padding: 16px;
+    height: auto;
+    margin: auto;
+    /* display: flex;
+    justify-content: center; */
+    padding-bottom: 120px;
+    /* align-items: center; */
+    /* background: url(/Pingfah/img/tool/bg2.png); */
+}
+
+.gallery h2 {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #b3994c;
+    text-align: center;
+}
+
+.gallery a {
+    color: #b3994c;
+    transition: 0.1s;
+}
+
+.gallery a:hover {
+    color: rgb(131, 120, 47, 1);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "a a b b c c"
+        "d d d e e e"
+        "f f g g h h";
+    gap: 16px;
+    margin-top: 60px;
+}
+
+.gallery-grid .img1 {
+    grid-area: a;
+}
+
+.gallery-grid .img2 {
+    grid-area: b;
+}
+
+.gallery-grid .img3 {
+    grid-area: c;
+}
+
+.gallery-grid .img4 {
+    grid-area: d;
+}
+
+.gallery-grid .img5 {
+    grid-area: e;
+}
+
+.gallery-grid .img6 {
+    grid-area: f;
+}
+
+.gallery-grid .img7 {
+    grid-area: g;
+}
+
+.gallery-grid .img8 {
+    grid-area: h;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.clickTotop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid  rgb(131, 120, 47, 1);
+    border-radius: 4px;
+    background-color: rgb(131, 120, 47, 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.clickTotop:hover{
+    background-color: rgb(131, 120, 47, 0.7);
+}
+
+.clickTotop .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-bottom: 5px solid #fff;
+}
+
+@media screen and (max-width:1199px) {
+    .reservation{
+        width: 100%;
+        border-radius: 0px;
+        left: 0;
+        transform: none;
+    }
+
+    .reservation .re-flex{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+            "from to night people"
+            "check check check check";
+        gap: 32px 8px;
+    }
+
+    #from{
+        grid-area: from;
+        display: grid !important;
+        grid-template-columns: auto 1fr !important;
+    }
+
+    #to{
+        grid-area: to;
+        display: grid !important;
+        grid-template-columns: auto 1fr !important;
+    }
+
+    #night{
+        grid-area: night;
+    }
+
+    #p{
+        grid-area: people;
+    }
+
+    #checkRoom{
+        grid-area: check;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .about,.room-box,.gallery{
+        width: 100%;
+    }
+
+    .about .about-detail{
+        grid-template-columns: 550px auto;
+    }
+
+    .room-box .room-detail .room-grid, .room-box .room-detail .room-grid .detail-grid img{
+        height: auto;
+    }
+
+    .room-box .room-detail .room-grid .detail-grid{
+        display: block;
+    }
+    .submain2-box .submain2-grid{
+        width: 100%;
+        gap: 64px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .reservation .re-flex{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+            "from to night"
+            "people people people"
+            "check check check";
+        gap: 32px 8px;
+    }
+    .reservation .re-flex .roundtrip-input{
+        width: 240px;
+    }
+
+    .about .about-detail{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .banner{
+        height: 400px;
+    }
+    .reservation .re-flex{
+        display: block;
+    }
+
+    #to{
+        padding-top: 16px;
+    }
+
+    #night{
+        padding: 8px 0;
+        justify-content: flex-end;
+    }
+
+    #p{
+        padding-bottom: 16px;
+    }
+
+    #checkRoom{
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .reservation .re-flex .roundtrip-input{
+        width: 100%;
+    }
+
+    .about{
+        padding-top: 16px;
+    }
+
+    .about .about-detail{
+        display: block;
+        height: auto;
+    }
+
+    .about .about-detail > div{
+        padding: 32px 16px !important;
+    }
+
+    .room-box .room-detail .room-grid{
+        grid-template-columns: 100%;
+        row-gap: 16px;
+        padding-bottom: 0;
+    }
+
+    .submain2-box .submain2-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 64px 16px;
+    }
+
+    .gallery-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: none;
+    }
+
+    .gallery-grid div{
+        grid-area: auto !important;
+    }
+
+    .gallery-grid img{
+        height: 100%;
+    }
+}

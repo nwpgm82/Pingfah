@@ -1,0 +1,361 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(1.2);
+}
+
+.main-box {
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+    width: 300px;
+}
+
+.main-box .welcome {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 70px;
+}
+
+.main-box .pingfah {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.main-box .showMore-grid {
+    display: grid;
+    grid-template-columns: auto 24px;
+    width: 100px;
+}
+
+.main-box .showMore {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.main-box .showMore-grid .arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.submain-box {
+    width: 100%;
+    height: 1140px;
+    padding-top: 70px;
+    background: url(/Pingfah/img/tool/submain-banner.png) #FFFCF0 no-repeat bottom right;
+}
+
+.submain-box-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 1200px;
+    margin: auto;
+    padding: 64px 0;
+}
+
+.submain-box-grid .submain-img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.submain-box-grid h2 {
+    text-align: center;
+}
+
+.submain-box-grid .submain-topic {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color: rgba(131, 120, 47, 1);
+}
+
+.submain-box-grid .submain-text {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.submain2-box {
+    height: 650px;
+    background: url(/Pingfah/img/tool/convenient-banner.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submain2-box .submain2-topic {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #e6e2c9;
+    text-align: center;
+}
+
+.submain2-box .submain2-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 64px;
+    margin-top: 64px;
+    width: 800px;
+}
+
+.submain2-box .submain2-grid .icon-img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+
+.submain2-box .submain2-grid p {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e6e2c9;
+    text-align: center;
+}
+
+.submain3-box {
+    height: 850px;
+    background: url(/Pingfah/img/tool/submain-banner.png) #FFFCF0 no-repeat bottom right;
+}
+
+.submain3-box .submain3-subbox {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submain3-box .submain3-subbox .submain3-topic {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #000;
+    text-align: center;
+}
+
+.submain3-box .submain3-subbox .submain3-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 16px;
+    margin-top: 64px;
+    width: 100%;
+}
+
+.submain3-box .submain3-subbox .submain3-imgbox {
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.submain3-box .submain3-subbox .submain3-img {
+    width: 250px;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+.submain3-box .submain3-subbox .submain3-img:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    padding: 48px 240px 0 240px;
+    background-color: #fcf7e5;
+    -webkit-box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.footer .footer-logo{
+    width: 60px;
+}
+
+.footer .footer-topic{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(131, 120, 47, 1);
+    padding-bottom : 8px;
+}
+
+.footer p{
+    line-height: 32px;
+}
+
+.footer table{
+    table-layout: fixed;
+}
+
+.footer table td{
+    vertical-align: top;
+}
+
+.footer table td a, .footer table td p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer table td a:hover p{
+    color: rgba(131, 120, 47, 1);
+}
+
+.footer table td .footer-social{
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    width: 100px;
+    
+}
+
+.footer table td .footer-social .social-img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.footer table td .footer-social .social-img:hover{
+    filter: brightness(0.8);
+}
+
+
+@media screen and (max-width: 1179px){
+    .main-box{
+        left: 48px;
+    }
+    .submain-box{
+        padding: 70px 28px 0px 28px;
+    }
+
+    .submain-box .submain-box-grid{
+        width: 100%;
+    }
+
+    .submain-box .submain-box-grid .submain-img{
+        width: 500px;
+    }
+
+    .submain2-box, .submain2-box div, .submain2-box .submain2-grid{
+        width: 100%;
+    }
+
+    .submain3-box{
+        padding: 0 28px;
+    }
+
+    .footer{
+        padding: 48px 28px 24px 28px;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .submain-box{
+        height: auto;
+        padding: 70px 28px;
+    }
+    .submain-box .submain-box-grid{
+        display: flex;
+        flex-direction: column;
+        padding: 32px 0;
+    }
+
+    .submain-box .submain-box-grid .submain-img{
+        width: 100%;
+        
+    }
+
+    .submain3-box{
+        height: auto;
+        padding: 70px 28px;
+    }
+
+    .submain3-box .submain3-subbox{
+        display: block;
+    }
+
+    .submain3-box .submain3-subbox .submain3-grid{
+        grid-template-columns: auto auto;
+        width: 100%;
+    }
+
+    .submain3-box .submain3-subbox .submain3-grid .submain3-img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .main-box{
+        width: 90%;
+        left: 30px;
+    }
+
+    .submain-box,.submain3-box{
+        background: #FFFCF0;
+    }
+
+    .submain-box .submain-box-grid div{
+        padding: 48px 0 !important;
+    }
+
+    .submain-box .submain-box-grid .submain-img{
+        height: 250px;
+    }
+
+    .submain2-box{
+        height: auto;
+        padding: 70px 0;
+    }
+
+    .submain2-box .submain2-topic{
+        font-size: 28px;
+    }
+
+    .submain2-box .submain2-grid{
+        grid-template-columns: auto auto;
+    }
+
+    .submain3-box .submain3-grid .submain3-img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .footer table, .footer table tbody,.footer table tr,.footer table tr td{
+        display: block;
+    }
+
+    .footer table td{
+        width: 100%;
+        padding: 24px 0;
+    }
+}

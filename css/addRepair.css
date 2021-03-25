@@ -1,0 +1,175 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+.box {
+    padding: 80px 0 0 260px;
+}
+
+.addRepair-box {
+    width: 100%;
+    min-height: 800px;
+    padding: 36px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hr {
+    margin: 16px auto 0px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.addRepair-box input{
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.addRepair-box select{
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.addRepair-box p {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.addRepair-box .flex-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    width: 100%;
+    padding: 32px 0;
+}
+
+.addRepair-box .flex-detail input, .addRepair-box .flex-detail select{
+    margin-top: 8px;
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.addRepair-box textarea{
+    margin-top: 8px;
+    width: 100%;
+    height: 300px;
+    padding: 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    transition: 0.3s;
+}
+
+.addRepair-box button{
+    width: 80px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    background-color:  rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addRepair-box button:hover{
+    background-color:  rgb(131, 120, 47, 1);
+}
+
+/* .addRepair-box input[type=text]#repairDate{
+    background-image: url("../img/tool/calendar.png");
+    background-repeat:no-repeat;
+    background-size: 20px;
+    background-position: 92% 50%;
+    cursor: pointer;
+}
+
+.addRepair-box .dateText{
+    position: absolute;
+    bottom: 1px;
+    left: 12px;
+    margin: 0;
+    width: 152px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    cursor: default;
+} */
+
+@media screen and (max-width: 1599px) {
+    .box {
+        padding: 80px 0 0 calc(100% - 1340px);
+    }
+}
+
+@media screen and (max-width: 1569px) {
+    .box {
+        padding: 80px 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 1449px) {
+    .box {
+        padding: 80px 0 0 0;
+    }
+    .addRepair-box{
+        width: 100%;
+    }
+    .addRepair-box input[type=text]#repairDate{
+        background-position: 97% 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #box-padding {
+        padding: 0 !important;
+    }
+
+    .addRepair-box {
+        padding: 24px 16px;
+        border-radius: 0;
+        min-height: calc(100vh - 80px);
+    }
+}
+
+@media screen and (max-width: 360px){
+    .addRepair-box .flex-detail{
+        grid-template-columns: 100%;
+        row-gap: 16px;
+    }
+}

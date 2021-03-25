@@ -1,0 +1,160 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+    font-size: 14px;
+}
+
+.letter {
+    width: 210mm;
+    height: 297mm;
+    border: 1px solid #000;
+    /* padding: 1cm; */
+    padding: 16px 16px 8px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.letter .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.letter .header img {
+    width: 40px;
+    height: 40px;
+}
+
+.letter .header .code_text {
+    position: absolute;
+    top: -3px;
+    right: 20px;
+}
+
+.letter .name {
+    position: absolute;
+    top: -3px;
+    left: 32px;
+}
+
+.letter .email {
+    position: absolute;
+    top: -3px;
+    left: 332px;
+}
+
+.letter .tel {
+    position: absolute;
+    top: -3px;
+    right: 162px;
+}
+
+.letter table {
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+
+/* .letter table tr:nth-child(6) {
+    height: 60px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.letter table tr:nth-child(7) {
+    height: 50px;
+    border: 1px solid #000;
+}
+
+.letter table tr:nth-child(5),
+.letter table tr:nth-child(6),
+.letter table tr:nth-child(7),
+.letter table tr:nth-child(8) {
+    height: 50px;
+}
+
+.letter table tr:nth-child(5) td:nth-child(1),
+.letter table tr:nth-child(6) td:nth-child(1),
+.letter table tr:nth-child(7) td:nth-child(1),
+.letter table tr:nth-child(8) td:nth-child(1) {
+    border: none;
+}
+
+.letter table tr:nth-child(5) td:nth-child(2),
+.letter table tr:nth-child(5) td:nth-child(3),
+.letter table tr:nth-child(6) td:nth-child(2),
+.letter table tr:nth-child(6) td:nth-child(3),
+.letter table tr:nth-child(7) td:nth-child(2),
+.letter table tr:nth-child(7) td:nth-child(3),
+.letter table tr:nth-child(8) td:nth-child(2),
+.letter table tr:nth-child(8) td:nth-child(3) {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+} */
+
+.letter table tr:last-child{
+    border: 1px solid #000;
+    height: 50px;
+}
+
+.letter table tr th:nth-child(1) {
+    width: 8%;
+}
+
+.letter table tr th:nth-child(2) {
+    width: 44%;
+}
+
+.letter table tr th:nth-child(3) {
+    width: 13%;
+}
+
+.letter table tr th:nth-child(4) {
+    width: 13%;
+}
+
+.letter table tr th:nth-child(5) {
+    width: 20%;
+}
+
+.letter table tr th{
+    border: 1px solid #000;
+    height: 50px;
+}
+
+.letter table tr td {
+    height: 50px;
+}
+
+.letter table tr td:not(:nth-child(2)) {
+    text-align: center;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.letter table tr:not(:last-child) td:nth-child(2) {
+    padding: 0 16px;
+}
+
+.letter table tr td:last-child{
+    text-align: right;
+    padding: 0 16px;
+}
+
+.letter .sig{
+    display: flex;
+    justify-content: space-between;
+}

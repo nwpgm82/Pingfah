@@ -1,0 +1,135 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+    font-size: 14px;
+}
+
+.letter {
+    width: 210mm;
+    height: 297mm;
+    border: 1px solid #000;
+    /* padding: 1cm; */
+    padding: 16px 16px 8px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.letter .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.letter .header img {
+    width: 40px;
+    height: 40px;
+}
+
+.letter .header .code_text {
+    position: absolute;
+    top: -3px;
+    right: 20px;
+}
+
+.letter .name {
+    position: absolute;
+    top: -3px;
+    left: 32px;
+}
+
+.letter .email {
+    position: absolute;
+    top: -3px;
+    left: 298px;
+}
+
+.letter .tel {
+    position: absolute;
+    top: -3px;
+    right: 50px;
+}
+
+.letter table {
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.letter table tr th {
+    border: 1px solid #000;
+}
+
+.letter table tr th:nth-child(1) {
+    width: 6%;
+}
+
+.letter table tr th:nth-child(2) {
+    width: 63%;
+}
+
+.letter table tr th:nth-child(3) {
+    width: 14%;
+}
+
+.letter table tr th:nth-child(4) {
+    width: 17%;
+}
+
+/* .letter table tr th:nth-child(5) {
+    width: 20%;
+} */
+
+.letter table tr {
+
+    height: 50px;
+}
+
+.letter table tr td {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    padding: 0 16px;
+}
+
+.letter table tr td:first-child {
+    text-align: center;
+}
+
+.letter table tr td:last-child {
+    text-align: right;
+}
+
+.letter table tr:nth-last-child(4) {
+    border: 1px solid;
+}
+
+.letter table tr:nth-last-child(3) td:first-child, .letter table tr:nth-last-child(2) td:first-child, .letter table tr:last-child td:first-child{
+    border: none;
+}
+
+.letter table tr:nth-last-child(3) td:nth-last-child(2),
+.letter table tr:nth-last-child(3) td:last-child,
+.letter table tr:nth-last-child(2) td:nth-last-child(2),
+.letter table tr:nth-last-child(2) td:last-child,
+.letter table tr:last-child td:nth-last-child(2),
+.letter table tr:last-child td:last-child {
+    border: 1px solid;
+}
+
+.letter table .damage_list{
+    height: 36px;
+}
+
+.letter .sig{
+    display: flex;
+    justify-content: space-between;
+}

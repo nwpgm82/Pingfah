@@ -1,0 +1,84 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+html,body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.forgotPass{
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    padding: 16px;
+    line-height: 30px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.forgotPass img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: auto;
+}
+
+.forgotPass form{
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+}
+
+.forgotPass form p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    margin: 8px 0;
+}
+
+.forgotPass form input{
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 4px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    transition: 0.3s;
+}
+
+.forgotPass form input:hover,.login form input:focus{
+    border: 1px solid rgb(131, 120, 47, 1);
+}
+
+.forgotPass form button[type="submit"]{
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.forgotPass form button[type="submit"]:hover{
+    background-color: rgb(131, 120, 47, 1);
+}

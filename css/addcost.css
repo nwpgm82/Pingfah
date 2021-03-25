@@ -1,0 +1,144 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+.box {
+    padding: 80px 0 0 260px;
+}
+
+.addcost-box {
+    width: fit-content;
+    min-height: fit-content;
+    padding: 32px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hr {
+    margin: 32px 0;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.addcost-box form select {
+    margin-top: 8px;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.addcost-box form input {
+    margin-top: 8px;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.addcost-box form .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 32px;
+}
+
+.addcost-box button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1599px) {
+    .box {
+        padding: 80px 0 0 calc(100% - 1340px);
+    }
+}
+
+@media screen and (max-width: 1569px) {
+    .box {
+        padding: 80px 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 1449px) {
+    .box {
+        padding: 80px 0 0 0;
+    }
+    .addcost-box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #box-padding {
+        padding: 0 !important;
+    }
+
+    .addcost-box {
+        padding: 24px 16px;
+        border-radius: 0;
+        min-height: calc(100vh - 80px);
+    }
+
+    #hr{
+        margin: 16px auto 0px auto;
+    }
+
+    .addcost-box form .grid{
+        padding-top: 32px;
+        grid-template-areas: 
+        "a b"
+        "c d"
+        "e e"
+        "f f";
+    }
+
+    .addcost-box form .grid div:first-child{
+        grid-area: a;
+    }
+    .addcost-box form .grid div:nth-child(2){
+        grid-area: b;
+    }
+    .addcost-box form .grid div:nth-child(3){
+        grid-area: c;
+    }
+    .addcost-box form .grid div:nth-child(4){
+        grid-area: d;
+    }
+    .addcost-box form .grid div:nth-child(5){
+        grid-area: e;
+    }
+    .addcost-box form .grid div:nth-child(6){
+        grid-area: f;
+    }
+}

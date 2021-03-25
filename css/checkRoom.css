@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+body {
+    background: url('../img/tool/bg.png');
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    /* push it to the background */
+    top: 0px;
+    /* position it off the top background */
+    right: 0px;
+    bottom: -340px;
+    /* position it off the bottom background */
+    left: 0px;
+    background: url('../img/tool/flower.png') bottom left no-repeat, url('../img/tool/flower2.png') bottom right no-repeat;
+    opacity: 0.2;
+}
+
+.box {
+    width: 1200px;
+    margin: auto;
+    padding: 32px;
+}
+
+.box .checkRoom {
+    width: 100%;
+}
+
+.searchDate {
+    padding-top: 32px;
+    display: flex;
+}
+
+.box .checkRoom .searchDate .checkText {
+    font-family: 'Playfair Display', serif;
+}
+
+.box .checkRoom input {
+    width: 200px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* .box .checkRoom .searchDate input[type=date]{
+    padding: 0 40px 0 12px;
+} */
+
+.box .checkRoom .roundtrip-input {
+    color: transparent;
+    background-image: url("../img/tool/calendar.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 92% 50%;
+    cursor: pointer;
+}
+
+.box .checkRoom #people,
+.box .checkRoom #people1,
+.box .checkRoom #people2 {
+    width: 70px;
+}
+
+.box .checkRoom input[type=number]#people1,
+.box .checkRoom input[type=number]#people2 {
+    cursor: default;
+}
+
+/* .box .checkRoom .searchDate input[type=date]:before {
+    top: 10px; left: 12px;
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+}
+
+.box .checkRoom .searchDate input[type=date]::-webkit-datetime-edit, input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-clear-button {
+    display: none;
+}
+.box .checkRoom .searchDate input[type=date]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    color: black;
+    opacity: 1;
+    cursor: pointer;
+} */
+
+.box .checkRoom .searchDate .dateText {
+    position: absolute;
+    width: 134px;
+    top: 10px;
+    left: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.box .checkRoom .searchDate button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hr {
+    margin: 16px auto 32px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+/* .box .checkRoom .grid{
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+} */
+
+.box .checkRoom .card {
+    margin-bottom: 24px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background: url("../img/tool/bg2.png");
+    overflow: hidden;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.box .checkRoom .card .card-content {
+    padding: 32px;
+}
+
+.box .checkRoom .card h2 {
+    color: #b3994c;
+    font-weight: bold;
+}
+
+.box .checkRoom .card .img-grid {
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.8fr;
+    gap: 4px 4px;
+    grid-template-areas:
+        "a a"
+        "b c";
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+    height: 125px;
+}
+
+.c {
+    grid-area: c;
+    height: 125px;
+}
+
+.box .checkRoom .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box .checkRoom .card .detail {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    line-height: 40px;
+    height: 450px;
+}
+
+.box .checkRoom .card .detail .user-grid {
+    display: grid;
+    grid-template-columns: 20px auto;
+    column-gap: 8px;
+    margin: 16px 0;
+}
+
+.box .checkRoom .card .detail .user-grid img {
+    width: 20px;
+    object-fit: contain;
+}
+
+.box .checkRoom .card .detail .convenient-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 16px;
+    line-height: 20px;
+}
+
+.box .checkRoom .card .detail .convenient-grid .sub-grid {
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: 30px auto;
+    column-gap: 16px;
+    width: 100%;
+    align-items: center;
+}
+
+.box .checkRoom .card .detail .convenient-grid .sub-grid img {
+    width: 30px;
+    object-fit: contain;
+}
+
+.box .checkRoom input[type=number]::-webkit-inner-spin-button,
+.box .checkRoom input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.box .checkRoom input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.box .checkRoom button {
+    width: auto;
+    height: 40px;
+    padding: 0 16px 4px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box .checkRoom .rent {
+    width: 180px;
+    height: 60px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box .checkRoom button:hover {
+    background-color: rgb(131, 120, 47, 1);
+}
+
+
+.box .checkRoom .card .cardimg {
+    vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.box .checkRoom .card .container {
+    position: relative;
+    -webkit-box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 0px 4px 0px rgba(48, 35, 35, 0.2);
+}
+
+/* Hide the images by default */
+.box .checkRoom .card .mySlides1,
+.box .checkRoom .card .mySlides2 {
+    display: none;
+    height: 536px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.box .checkRoom .card .cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.box .checkRoom .card .prev,
+.box .checkRoom .card .next {
+    cursor: pointer;
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    /* margin-top: -50px; */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.box .checkRoom .card .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.box .checkRoom .card .prev:hover,
+.box .checkRoom .card .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.box .checkRoom .card .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.box .checkRoom .card .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.box .checkRoom .card .row {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    display: -webkit-box;
+}
+
+.box .checkRoom .card .row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.box .checkRoom .card .row::-webkit-scrollbar-thumb {
+    background: rgb(131, 120, 47, 0.7);
+}
+
+.box .checkRoom .card .row::-webkit-scrollbar-thumb:hover {
+    background: rgb(131, 120, 47, 1);
+}
+
+.box .checkRoom .card .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.box .checkRoom .card .column {
+    width: 20%;
+    height: 97px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.box .checkRoom .card .demo1,
+.box .checkRoom .card .demo2 {
+    opacity: 0.3;
+    transition: 0.1s;
+}
+
+.box .checkRoom .card .active,
+.box .checkRoom .card .demo1:hover,
+.box .checkRoom .card .demo2:hover {
+    opacity: 1;
+}
+
+#from,
+#to {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+@media screen and (max-width: 1199px) {
+    .box {
+        width: 100%;
+        padding: 80px 16px 32px 16px;
+    }
+
+    .box .checkRoom .card .prev,
+    .box .checkRoom .card .next {
+        background-color: rgba(0, 0, 0, 0.8);
+        top: 42%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .searchDate {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        grid-template-areas:
+            "from to night"
+            "p p p"
+            "search search search";
+        gap: 16px;
+    }
+
+    #from {
+        grid-area: from;
+    }
+
+    #to {
+        grid-area: to;
+        padding: 0 !important;
+    }
+
+    #night {
+        grid-area: night;
+    }
+
+    #p {
+        grid-area: p;
+        padding: 0 !important;
+    }
+
+    #search {
+        grid-area: search;
+    }
+
+    .box .checkRoom .roundtrip-input {
+        width: 100%;
+        background-position: 96% 50%;
+    }
+
+    .box .checkRoom .card .detail {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body::before {
+        background-image: none;
+    }
+    .searchDate {
+        display: block;
+    }
+
+    #to {
+        padding-top: 16px !important;
+    }
+
+    #night {
+        padding: 8px 0;
+        justify-content: flex-end;
+    }
+
+    #p {
+        padding-bottom: 16px !important;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .box .checkRoom .card .card-content {
+        padding: 32px 16px;
+    }
+
+    .box .checkRoom .card .mySlides1,
+    .box .checkRoom .card .mySlides2 {
+        height: 290px;
+    }
+
+    .box .checkRoom .card .column {
+        height: 50px;
+    }
+
+    .box .checkRoom .card .detail {
+        display: block;
+        height: auto;
+    }
+
+    .box .checkRoom .card .detail>div:last-child {
+        padding-top: 32px;
+    }
+
+    .box .checkRoom .card .detail .convenient-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .f {
+        display: block !important;
+        padding-top: 32px;
+    }
+
+    .f p {
+        text-align: right;
+    }
+
+    .f .subf {
+        padding-top: 32px;
+        justify-content: flex-end;
+    }
+
+    #r {
+        justify-content: center !important;
+    }
+}

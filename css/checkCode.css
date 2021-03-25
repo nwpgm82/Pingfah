@@ -1,0 +1,355 @@
+@font-face {
+    font-family: Sarabun;
+    src: url(../fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sarabun;
+}
+
+body {
+    background: url('../img/tool/bg.png');
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    z-index: -1; /* push it to the background */
+    top: 0px; /* position it off the top background */
+    right: 0px;
+    bottom: -340px; /* position it off the bottom background */
+    left: 0px;
+    background: url('../img/tool/flower.png') bottom left no-repeat,url('../img/tool/flower2.png') bottom right no-repeat;
+    opacity: 0.2;
+}
+
+.box {
+    width: 1200px;
+    margin: auto;
+    padding: 32px;
+}
+
+.box .search{
+    display: flex;
+    justify-content: flex-start;
+    height: 57px;
+}
+
+.box .search input {
+    width: 180px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.hr {
+    margin: 16px auto 32px auto;
+    border-bottom: 1px solid rgb(131, 120, 47, 0.7);
+    opacity: 0.5;
+}
+
+.box .checkCode-box {
+    width: 100%;
+    height: auto;
+    background-image: url("../img/tool/bg2.png");
+    border-radius: 4px;
+    padding: 24px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+p{
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;     
+    white-space: nowrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 16px 8px;
+    grid-template-areas:
+        "name_title name_title firstname firstname firstname lastname lastname lastname"
+        "id_card id_card email email email email tel tel"
+        "check_in check_in check_out check_out night people air fan"
+        "total_price total_price status status . . . .";
+}
+
+.name_title {
+    grid-area: name_title;
+    height: 86px;
+}
+
+.id_card {
+    grid-area: id_card;
+    height: 86px;
+}
+
+.firstname {
+    grid-area: firstname;
+    height: 86px;
+}
+
+.lastname {
+    grid-area: lastname;
+    height: 86px;
+}
+
+.email {
+    grid-area: email;
+    height: 86px;
+}
+
+.tel {
+    grid-area: tel;
+    height: 86px;
+}
+
+.check_in {
+    grid-area: check_in;
+    height: 86px;
+}
+
+.check_out {
+    grid-area: check_out;
+    height: 86px;
+}
+
+.night{
+    grid-area: night;
+    height: 86px;
+}
+
+.people {
+    grid-area: people;
+    height: 86px;
+}
+
+.air {
+    grid-area: air;
+    height: 86px;
+}
+
+.fan {
+    grid-area: fan;
+    height: 86px;
+}
+
+.total_price{
+    grid-area: total_price;
+    height: 86px;
+}
+
+.vat{
+    grid-area: vat;
+    height: 86px;
+}
+
+.status{
+    grid-area: status;
+    height: 86px;
+}
+
+.box .checkCode-box input:not([type=file]) {
+    margin-top: 8px;
+    width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.box .checkCode-box .input-status{
+    margin-top: 8px;
+    width: 150px;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid rgb(131, 120, 47, 0.5);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.box .checkCode-box .grid-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+}
+
+.box .checkCode-box .grid-box .img-box{
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(131, 120, 47, 0.7);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.box .checkCode-box .grid-box .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.box .checkCode-box .grid-box .img-box .del-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    padding: 0;
+    background-image: url(../img/tool/trash-icon.png);
+    background-color: rgb(255, 70, 70);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box .checkCode-box .grid-box .img-box .del-btn:hover{
+    background-color: rgb(216, 40, 40);
+}
+
+.box button{
+    width: auto;
+    height: 40px;
+    margin: 0 16px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box .cancel-btn{
+    background-color: rgb(255, 70, 70);
+}
+
+.box .cancel-btn:hover{
+    background-color: rgb(216, 40, 40);
+}
+
+.box button:disabled{
+    background-color: #ddd;
+    cursor: default;
+}
+
+.box button:disabled:hover{
+    background-color: #ddd;
+}
+
+.box .checkCode-box .grid-box ul{
+    padding-left: 20px;
+}
+
+.box .checkCode-box .grid-box ul li{
+    line-height: 60px;
+}
+
+.box .checkCode-box .grid-box ul li div{
+    display: flex;
+    align-items: center;
+}
+
+.box .checkCode-box .grid-box ul li div a{
+    margin: 0 16px;
+    width: 40px;
+    height: 40px;
+}
+
+.box .checkCode-box .grid-box ul li .print{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(131, 120, 47, 0.7);
+    background-image: url("../img/tool/printer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box .checkCode-box .grid-box ul li .print:disabled{
+    background-color: #ddd;
+    cursor: default;
+}
+
+.box .checkCode-box .grid-box ul li .print:hover{
+    background-color: rgb(131, 120, 47, 1);
+}
+
+.box .checkCode-box .grid-box ul li .print:disabled:hover{
+    background-color: #ddd;
+}
+
+@media screen and (max-width: 1199px){
+    .box{
+        padding: 112px 16px 24px 16px;
+        width: 100%;
+    }
+    .grid-container{
+        grid-template-areas: 
+        "name_title name_title firstname firstname firstname lastname lastname lastname"
+        "id_card id_card id_card email email email tel tel"
+        "check_in check_in check_in check_out check_out check_out night night"
+        "people people air air fan fan vat vat"
+        "total_price total_price total_price status status status . .";
+    }
+    #g{
+        height: auto !important;
+    }
+    .box .checkCode-box .grid-box{
+        grid-template-columns: 100%;
+        row-gap: 16px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .box .search{
+        display: block;
+        height: auto;
+    }
+
+    .box .search > label{
+        padding: 0 !important;
+    }
+
+    .box .search > div{
+        padding: 8px 0 16px 0;
+    }
+
+    .box .search input{
+        width: 100%;
+    }
+
+    .box .search > button{
+        margin: 0 !important;
+        width: 100%;
+    }
+
+    .hr{
+        margin: 16px 0;
+    }
+    
+    .grid-container{
+        display: block;
+    }
+}
